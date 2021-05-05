@@ -1,0 +1,99 @@
+void main() {
+  haciendoMientras();
+  factorials();
+  mientrasBreak();
+  ejemploSwitch();
+  ejemplosDate();
+}
+
+
+// Funciones
+
+haciendoMientras(){
+  int n = 1;
+  do{
+    print(n);
+    --n;
+  } while (n > 0);
+  print("salio");
+}
+
+factorials(){
+  int num = 5;
+  int factorial = 1;
+  while( num >= 1 ){
+    factorial = factorial * num;
+    --num;
+  }
+  print("The factorial is ${factorial}");
+}
+mientrasBreak(){
+  int count = 1;
+  while( count <= 10){
+    print("dentro del while ${count}");
+    count++;
+    if(count == 4){
+      break;
+    }
+  }
+  print("afuera del while");
+}
+
+ejemploSwitch(){
+  String grado = "C";
+  switch (grado){
+    case "A":{
+      print("Excellent");
+    }
+      break;
+    case "B":{
+      print("good");
+    }
+      break;
+    case "C":{
+      print("Fair");
+    }
+      break;
+    case "D":{
+      print("Poor");
+    }
+      break;
+      
+    default:{
+      print("Invalid Choice");
+    }
+      break;
+  }
+}
+
+ejemplosDate(){
+  bool esMayorFunction( int numeroUno, int numeroDos  ){
+   return (numeroUno > numeroDos );
+}
+
+int compareToDateNow( String date ){
+  DateTime currentTime =  DateTime.now();
+  DateTime otherDate = DateTime.parse( date );
+  return currentTime.compareTo( otherDate );
+}
+
+String compareToDateNowasString( String date ){
+  DateTime currentTime =  DateTime.now();
+  DateTime otherDate = DateTime.parse( date );
+  int result = currentTime.compareTo( otherDate );
+  return ( ( result >= 0 ) ? 'ahora o en el futuro': ' del pasado' ); 
+}
+
+String compareToDateNowasStringTwo( String date ){
+  int result =   DateTime.now().compareTo( DateTime.parse( date) );
+  return ( ( result >= 0 ) ? 'ahora o en el futuro': ' del pasado' );
+  }
+  
+  print( compareToDateNowasString('2020-11-20') );
+  
+  print( compareToDateNowasString('2022-09-01') );
+
+  print( compareToDateNowasStringTwo('2020-11-20') );
+  
+  print( compareToDateNowasStringTwo('2022-09-01') );
+}
