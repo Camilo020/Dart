@@ -1,0 +1,33 @@
+class Racional{
+  
+  void sumar(int num1, int den1, int num2,int den2){
+    int resultNum = 0;
+    int resultDen = 0;
+    resultNum = ((num1*den2)+(den1*num2));
+    resultDen = (den1*den2);
+    print(resultNum);
+    print('-');
+    print(resultDen);
+    
+  }
+  
+  void restar(int num1, int den1, int num2,int den2){
+    int resultNum = 0;
+    int resultDen = 0;
+    resultNum = ((num1*den2)-(den1*num2));
+    print('');
+    resultDen = (den1*den2);
+    print(resultNum);
+    print('-');
+    print(resultDen);
+  }
+  
+  
+}
+
+void main() {
+  Racional newRacional = new Racional();
+  newRacional.sumar(3,2,5,3);
+  newRacional.restar(11,7,5,7);
+  
+}
