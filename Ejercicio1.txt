@@ -1,0 +1,20 @@
+import 'dart:math';
+
+class Punto{
+  
+  void to_string_cartesianas(double x, double y){
+    print('(${x} , ${y})');
+  }
+  void to_string_polares(double x, double y){
+    num r = sqrt(pow(x,2) + pow(y,2));
+    num r1 = r;
+    r = atan(y/x);
+    print('(${r1} , ${r})');
+  }
+}
+
+void main() {
+  Punto newPunto = new Punto();
+  newPunto.to_string_cartesianas(2,5);
+  newPunto.to_string_polares(3,4);
+}
