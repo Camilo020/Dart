@@ -4,6 +4,7 @@ void main() {
   mientrasBreak();
   ejemploSwitch();
   ejemplosDate();
+  ejemploAnonimas();
 }
 
 
@@ -96,4 +97,16 @@ String compareToDateNowasStringTwo( String date ){
   print( compareToDateNowasStringTwo('2020-11-20') );
   
   print( compareToDateNowasStringTwo('2022-09-01') );
+}
+
+ejemploAnonimas(){
+  var list = ['apples', 'bananas', 'oranges'];
+  
+  for(int index=0; index < list.length; index++){
+    print('la fruta implementando for es: ${list[index]}');
+  }
+  
+  list.forEach( ( item ) {
+    print('la fruta es ${item}');
+  });
 }
